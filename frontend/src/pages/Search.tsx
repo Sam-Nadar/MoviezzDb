@@ -54,7 +54,7 @@ const Search: React.FC = () => {
   return (
     <div className="container mx-auto p-6">
       {/* Title */}
-      <h1 className="text-4xl font-bold text-center">IMDb</h1>
+      <h1 className="text-4xl font-bold text-center">MoviezzDb</h1>
       <p className="text-gray-600 text-center mt-2">
         The best place to find and review movies.
       </p>
