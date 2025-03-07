@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "d8fd3d74-9df0-4ac2-a76b-9c3e741debb9",
+		"name": "moviezz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25831180"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getMovies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzllM2NiOWI2MzIxZjdmOTI0N2JkYiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQxMjg0MzU2LCJleHAiOjE3NDIzNjQzNTZ9.m_VVTQiz3Jl_-GYgb0L3W5zJNH2L8DL68GVK_W0tqdA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{liveurl}}/movies",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "searchMovie",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzllM2NiOWI2MzIxZjdmOTI0N2JkYiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQxMjg0MzU2LCJleHAiOjE3NDIzNjQzNTZ9.m_VVTQiz3Jl_-GYgb0L3W5zJNH2L8DL68GVK_W0tqdA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{liveurl}}/movies/search?query=mind",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"movies",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "mind"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSortedMovies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzllM2NiOWI2MzIxZjdmOTI0N2JkYiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzQxMjg0MzU2LCJleHAiOjE3NDIzNjQzNTZ9.m_VVTQiz3Jl_-GYgb0L3W5zJNH2L8DL68GVK_W0tqdA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{liveurl}}/movies/sorted?sortBy=rating",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"movies",
+								"sorted"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "rating"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sam10@gmail.com\",\r\n    \"password\":\"12345610\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveurl}}/auth/login",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userRegisster",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sam10\",\r\n    \"email\":\"sam10@gmail.com\",\r\n    \"password\":\"12345610\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveurl}}/auth/register",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "adminRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"sam3\",\r\n    \"email\":\"sam3@gmail.com\",\r\n    \"password\":\"1234563\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveurl}}/auth/register",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adminLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sam3@gmail.com\",\r\n    \"password\":\"1234563\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveurl}}/auth/admin-login",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"auth",
+								"admin-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMovie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzliYTg2NmQzY2ViNGM0YTcyNjI2OCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MTI4MzEwOCwiZXhwIjoxNzQyMzYzMTA4fQ.xqNYGRTjd18c_e6ulgxqfbLXHy5WkDQBog602nxZmAU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n\r\n[\r\n  {\r\n    \"title\": \"The Dark Knight\",\r\n    \"description\": \"Batman faces the Joker, a criminal mastermind who unleashes chaos upon Gotham City.\",\r\n    \"rating\": 9.0,\r\n    \"releaseDate\": \"18 Jul 2008\",\r\n    \"duration\": 152,\r\n    \"genre\": \"Action, Crime, Drama\"\r\n  },\r\n\r\n  {\r\n    \"title\": \"The Shawshank Redemption\",\r\n    \"description\": \"Two imprisoned men bond over decades, finding solace and redemption through acts of kindness.\",\r\n    \"rating\": 9.3,\r\n    \"releaseDate\": \"14 Oct 1994\",\r\n    \"duration\": 142,\r\n    \"genre\": \"Drama\"\r\n  },\r\n  {\r\n    \"title\": \"Pulp Fiction\",\r\n    \"description\": \"Interwoven stories of crime, redemption, and dark humor unfold in Quentin Tarantino's classic film.\",\r\n    \"rating\": 8.9,\r\n    \"releaseDate\": \"14 Oct 1994\",\r\n    \"duration\": 154,\r\n    \"genre\": \"Crime, Drama\"\r\n  },\r\n  {\r\n    \"title\": \"Avengers: Endgame\",\r\n    \"description\": \"The Avengers reunite to undo Thanos' devastating snap and restore balance to the universe.\",\r\n    \"rating\": 8.4,\r\n    \"releaseDate\": \"26 Apr 2019\",\r\n    \"duration\": 181,\r\n    \"genre\": \"Action, Adventure, Sci-Fi\"\r\n  },\r\n  {\r\n    \"title\": \"Fight Club\",\r\n    \"description\": \"An insomniac office worker and a soap salesman form an underground fight club that evolves into chaos.\",\r\n    \"rating\": 8.8,\r\n    \"releaseDate\": \"15 Oct 1999\",\r\n    \"duration\": 139,\r\n    \"genre\": \"Drama\"\r\n  },\r\n  {\r\n    \"title\": \"The Matrix\",\r\n    \"description\": \"A computer hacker discovers the shocking reality of his world and joins the fight against machines.\",\r\n    \"rating\": 8.7,\r\n    \"releaseDate\": \"31 Mar 1999\",\r\n    \"duration\": 136,\r\n    \"genre\": \"Action, Sci-Fi\"\r\n  },\r\n  {\r\n    \"title\": \"Gladiator\",\r\n    \"description\": \"A betrayed Roman general seeks vengeance as a gladiator in the arena, fighting for justice.\",\r\n    \"rating\": 8.5,\r\n    \"releaseDate\": \"05 May 2000\",\r\n    \"duration\": 155,\r\n    \"genre\": \"Action, Drama\"\r\n  },\r\n  {\r\n    \"title\": \"The Godfather\",\r\n    \"description\": \"The aging patriarch of an organized crime family transfers power to his reluctant son.\",\r\n    \"rating\": 9.2,\r\n    \"releaseDate\": \"24 Mar 1972\",\r\n    \"duration\": 175,\r\n    \"genre\": \"Crime, Drama\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveurl}}/movies",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMovie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzliYTg2NmQzY2ViNGM0YTcyNjI2OCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MTI4MzEwOCwiZXhwIjoxNzQyMzYzMTA4fQ.xqNYGRTjd18c_e6ulgxqfbLXHy5WkDQBog602nxZmAU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{liveurl}}/movies/67c9e2fc9b6321f7f9247bd7",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"movies",
+								"67c9e2fc9b6321f7f9247bd7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editMovie",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YzliYTg2NmQzY2ViNGM0YTcyNjI2OCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MTI4MzEwOCwiZXhwIjoxNzQyMzYzMTA4fQ.xqNYGRTjd18c_e6ulgxqfbLXHy5WkDQBog602nxZmAU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"duration\":170\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{liveurl}}/movies/67c9c44695ac5661ad5403ed",
+							"host": [
+								"{{liveurl}}"
+							],
+							"path": [
+								"movies",
+								"67c9c44695ac5661ad5403ed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5001",
+			"type": "default"
+		},
+		{
+			"key": "liveurl",
+			"value": "https://moviezzdb.onrender.com/api",
+			"type": "default"
+		}
+	]
+}
