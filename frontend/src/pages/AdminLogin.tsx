@@ -29,7 +29,7 @@ const AdminLogin: React.FC = () => {
       const response = await axios.post(`${BASE_URL}/auth/admin-login`, formData);
       toast.success("Admin Login Successful!");
       localStorage.setItem("token", response.data.token);
-      navigate("admin/adminHome"); // Redirect to admin home page
+      navigate("/admin/adminHome"); // Redirect to admin home page
     } catch (error: any) {
       toast.error(error.response?.data?.message || "Admin login failed");
     }
